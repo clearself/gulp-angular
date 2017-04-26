@@ -118,9 +118,9 @@ gulp.task('revJs',function(){
 })
 //将css,js带版本号的形式同步到index.html中
 gulp.task('revHtml',function(){
-	gulp.src([filePath.dist+'css/*.json',filePath.dist+'js/*.json',filePath.dist+'index.html'])
+	gulp.src([filePath.dist+'css/*.json',filePath.dist+'js/*.json',filePath.root+'index.html'])
 		.pipe(revCollector())
-		.pipe(gulp.dest(filePath.dist))
+		.pipe(gulp.dest(filePath.root))
 })
 // 版本号 替换 /
 gulp.task('dev',function(done){
