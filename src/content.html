@@ -1,6 +1,8 @@
-<div>
+<div class="content">
+	<div class="top"></div>
 	<div class="nav">
 		<a style="margin-right: 20px;"ui-sref-active="active" ng-click="navClick(item)" ng-repeat="item in navList" ui-sref="{{item.url}}">{{item.text}}</a>
 	</div>
-	<ui-view></ui-view>
+	<ui-view class="content-view"></ui-view>
 </div>
+

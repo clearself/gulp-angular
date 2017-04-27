@@ -23,8 +23,9 @@ var filePath = {
 //实时刷新页面
 gulp.task('f5reload', function() {
 	browserSync({
+		open:false,
 		server: {
-			baseDir: filePath.root
+			baseDir: filePath.dist
 		}
 	})
 })
@@ -57,10 +58,8 @@ gulp.task('copyCSS', function() {
 //js
 gulp.task('minJS', function() {
 	gulp.src([
-			filePath.src + 'js/*.js',
-			'!'+filePath.src+'js/baseurl.js',
-			'!'+filePath.src+'js/sha1.js'
-		])
+			filePath.src + 'js/*.js'
+			])
 		.pipe(ngmin({dynamic: false}))
 		.pipe(stripDebug()) 
 		.pipe(uglify({outSourceMap: false}).on('error', function (e) { //  压缩时显示出错 行
@@ -95,10 +94,7 @@ gulp.task('revCSS',function(){
 //给js添加版本号
 gulp.task('revJs',function(){
 	gulp.src([
-			filePath.src + 'js/*.js',
-			'!'+filePath.src+'js/baseurl.js',
-			'!'+filePath.src+'js/sha1.js'
-		])
+			filePath.src + 'js/*.js'])
 		.pipe(ngmin({dynamic: false}))
 		.pipe(stripDebug()) 
 		.pipe(uglify({outSourceMap: false}).on('error', function (e) { //  压缩时显示出错 行
@@ -118,9 +114,9 @@ gulp.task('revJs',function(){
 })
 //将css,js带版本号的形式同步到index.html中
 gulp.task('revHtml',function(){
-	gulp.src([filePath.dist+'css/*.json',filePath.dist+'js/*.json',filePath.root+'index.html'])
+	gulp.src([filePath.dist+'css/*.json',filePath.dist+'js/*.json',filePath.dist+'index.html'])
 		.pipe(revCollector())
-		.pipe(gulp.dest(filePath.root))
+		.pipe(gulp.dest(filePath.dist))
 })
 // 版本号 替换 /
 gulp.task('dev',function(done){

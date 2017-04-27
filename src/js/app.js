@@ -3,22 +3,22 @@ app.config(function($stateProvider, $urlRouterProvider,$httpProvider){
 	$stateProvider
         .state('index', {
             url: "/index",
-            templateUrl: "./dist/login.html",
+            templateUrl: "login.html",
             controller:'login_ctrl'
         })
         .state('content',{
             url: "/content",
-            templateUrl: "./dist/content.html",
+            templateUrl: "content.html",
             controller:'content_ctrl'
         })
         .state('content.list1',{
             url: "/list1",
-            templateUrl: "./dist/list1.html",
+            templateUrl: "list1.html",
             controller:'list1_ctrl'
         })
         .state('content.list2',{
             url: "/list2",
-            templateUrl: "./dist/list2.html",
+            templateUrl: "list2.html",
             controller:'list2_ctrl'
         });
     	$urlRouterProvider.otherwise("/index");
