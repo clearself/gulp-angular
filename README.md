@@ -55,7 +55,7 @@ $ npm install
 更新为: regexp: new RegExp( '([\/\\\\\'"])' + pattern+'(\\?v=\\w{10})?', 'g' ),
 ```
 修改详情请参考  [进入详情](http://www.jb51.net/article/100652.htm "进入详情") 
-5、执行gulp,默认端口为3000，在浏览器中打开http://localhost:3000进入项目
+5、执行gulp,默认端口为3000，在浏览器中打开localhost:3000进入项目
 ```ruby
 $ gulp
 ```
