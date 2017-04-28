@@ -1,5 +1,7 @@
-app.controller('list2_ctrl',['$scope','$rootScope','$location','$timeout','listService',function($scope,$rootScope,$location,$timeout,listService){
-	listService.list().success(function(res){
-			$scope.list2 = res.list2;
-		}).error(function(error){});
+app.controller('list2_ctrl',['$scope','$rootScope','$stateParams','$location','$timeout','listService',function($scope,$rootScope,$stateParams,$location,$timeout,listService){
+	$scope.listName = 'coming_soon';
+	listService.list($scope.listName).success(function(res){
+		$scope.listItems = res.subjects;
+			console.log(res);
+	}).error(function(error){});
 }])

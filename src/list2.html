@@ -1,5 +1,10 @@
-<div>
-	<url>
-		<li ng-repeat="item in list2">{{item.title}}</li>
-	</url>
+<div class="list">
+	<div class="row">
+		<div class="col-xs-4 col-md-2" ng-repeat="item in listItems">
+			<div class="list-item">
+				<div><img src="{{item.images.medium}}" alt="" /></div>
+				<div>{{item.title}}</div>
+			</div>
+		</div>
+	</div>
 </div>

@@ -1,9 +1,17 @@
 //css reset
 * {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     border: 0px;
     font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+.row{
+    padding:0!important;
+    margin:0!important;
+  }
+.row>div{
+     padding:0!important;
+    margin:0!important;
 }
 body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -75,6 +83,49 @@ $colorG:#ccc;
         background-color: greenyellow;
     }
 }
+.top{
+    height:200px;
+    background-color: $colorR;
+    text-align: center;
+    line-height: 200px;
+    font-size:30px;
+    color:rgba(255,255,255,.8);
+    background-color: #5FC3E4;
+    background-image: linear-gradient(120deg, #E55D87, #5FC3E4);
+    background-image: -webkit-linear-gradient(120deg, #E55D87, #5FC3E4); /* Safari 5.1 - 6.0 */
+    background-image: -o-linear-gradient(120deg, #E55D87, #5FC3E4); /* Opera 11.1 - 12.0 */
+    background-image: -moz-linear-gradient(120deg, #E55D87, #5FC3E4); /* Firefox 3.6 - 15 */
+    background-image: linear-gradient(120deg, #E55D87, #5FC3E4); /* 标准的语法（必须放在最后） */
+    
+}
+
+.nav a{
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
 .nav a.active{
     color:$colorR;
+}
+.content-view{
+    padding:20px;
+}
+.list-item{
+    padding:10px;
+}
+.list-item>div:nth-of-type(1){
+    width:100%;
+    height:150px;
+}
+
+.list-item img{
+    width:100%;
+    height:100%;
+}
+.list-item>div:nth-of-type(2){
+    width:100%;
+    text-align: center;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
 }

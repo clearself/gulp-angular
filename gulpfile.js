@@ -25,7 +25,7 @@ gulp.task('f5reload', function() {
 	browserSync({
 		open:false,
 		server: {
-			baseDir: filePath.dist
+			baseDir: filePath.src
 		}
 	})
 })

@@ -1,8 +1,24 @@
 <div class="content">
-	<div class="top"></div>
-	<div class="nav">
-		<a style="margin-right: 20px;"ui-sref-active="active" ng-click="navClick(item)" ng-repeat="item in navList" ui-sref="{{item.url}}">{{item.text}}</a>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="top">世界因你而精彩!</div>
+		</div>
 	</div>
-	<ui-view class="content-view"></ui-view>
+	<div class="content-main">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<div class="nav">
+					<a ui-sref-active="active" ng-repeat="item in navList" ui-sref="{{item.url}}">{{item.text}}</a>
+				</div>
+			</div>
+			<div class="col-md-9 col-xs-12">
+				<div class="content-view">
+					<ui-view></ui-view>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
 </div>
 
